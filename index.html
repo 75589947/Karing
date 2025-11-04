@@ -372,7 +372,7 @@
                     githubConfig = JSON.parse(saved);
                     document.getElementById('githubToken').value = githubConfig.token || '';
                     document.getElementById('repoOwner').value = githubConfig.owner || '';
-                    document.getElementById('repoName').value = githubConfig.repo || 'Karing';
+                    document.getElementById('repoName').value = githubConfig.repo || 'My-text';
                 } catch (e) {
                     console.error('加载配置失败:', e);
                 }
@@ -424,7 +424,7 @@
             
             const token = document.getElementById('githubToken').value.trim();
             const owner = document.getElementById('repoOwner').value.trim();
-            const repo = document.getElementById('repoName').value.trim() || 'Karing';
+            const repo = document.getElementById('repoName').value.trim() || 'My-text';
             
             if (!token || !owner) {
                 showStatus('请填写GitHub配置', 'error');
@@ -496,10 +496,10 @@
                 
                 showStatus('<div class="loading"></div> 正在上传到GitHub...', 'info');
                 
-                const result = await githubUploadFile('subscribe.txt', base64Content);
+                const result = await githubUploadFile('free.txt', base64Content);
                 
                 showStatus('<i class="fas fa-check-circle"></i> 上传成功！', 'success');
-                showResult(`上传成功！\n文件: https://github.com/${githubConfig.owner}/${githubConfig.repo}/blob/main/subscribe.txt\n内容长度: ${base64Content.length} 字符\n提交SHA: ${result.commit.sha.substring(0, 8)}...`);
+                showResult(`上传成功！\n文件: https://github.com/${githubConfig.owner}/${githubConfig.repo}/blob/main/free.txt\n内容长度: ${base64Content.length} 字符\n提交SHA: ${result.commit.sha.substring(0, 8)}...`);
                 
             } catch (error) {
                 console.error('处理失败:', error);
@@ -560,7 +560,7 @@
                     headers: { 
                         'Authorization': `Bearer ${githubConfig.token}`, 
                         'Accept': 'application/vnd.github.v3+json',
-                        'User-Agent': 'Karing-Subscription-Processor'
+                        'User-Agent': 'My-text-Subscription-Processor'
                     },
                     timeout: 10000
                 });
@@ -590,10 +590,10 @@
                     'Authorization': `Bearer ${githubConfig.token}`,
                     'Content-Type': 'application/json',
                     'Accept': 'application/vnd.github.v3+json',
-                    'User-Agent': 'Karing-Subscription-Processor'
+                    'User-Agent': 'My-text-Subscription-Processor'
                 },
                 body: JSON.stringify({
-                    message: `更新订阅文件: ${new Date().toLocaleString('zh-CN')}`,
+                    message: `Update: ${new Date().toLocaleString('zh-CN')}`,
                     content: encodedContent,
                     sha: sha || undefined
                 }),
