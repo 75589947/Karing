@@ -1,1 +1,2 @@
-Legmir|Test|127.0.0.1|7000|0
+Mir|Legmir|Test|127.0.0.1|7000|0
+
