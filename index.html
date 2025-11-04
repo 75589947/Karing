@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karing 订阅处理器</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4b6cb7;
+            --primary-dark: #3a5795;
+            --secondary: #182848;
+            --success: #28a745;
+            --warning: #ffc107;
+            --danger: #dc3545;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --gray: #6c757d;
+            --border-radius: 6px;
+            --box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            --transition: all 0.2s ease;
+        }
+        
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+            line-height: 1.4;
+            font-size: 13px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 420px;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 16px 18px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            transform: rotate(30deg);
+        }
+        
+        h1 { 
+            font-size: 1.25rem; 
+            margin-bottom: 3px;
+            position: relative;
+        }
+        
+        .subtitle {
+            font-size: 0.75rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        
+        .content { 
+            padding: 18px; 
+        }
+        
+        .form-group {
+            margin-bottom: 12px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: var(--dark);
+            font-size: 12px;
+        }
+        
+        .config-input {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-size: 13px;
+            transition: var(--transition);
+        }
+        
+        .config-input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(75, 108, 183, 0.2);
+            outline: none;
+        }
+        
+        .upload-area {
+            border: 2px dashed var(--primary);
+            border-radius: var(--border-radius);
+            padding: 18px 12px;
+            text-align: center;
+            cursor: pointer;
+            background: rgba(75, 108, 183, 0.05);
+            margin: 14px 0;
+            transition: var(--transition);
+        }
+        
+        .upload-area:hover {
+            background: rgba(75, 108, 183, 0.1);
+            border-color: var(--primary-dark);
+        }
+        
+        .upload-area.active {
+            background: rgba(75, 108, 183, 0.15);
+            border-color: var(--primary-dark);
+        }
+        
+        .upload-icon {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 6px;
+        }
+        
+        .upload-area h3 {
+            font-size: 13px;
+            margin-bottom: 4px;
+        }
+        
+        .upload-area p {
+            font-size: 11px;
+            color: var(--gray);
+        }
+        
+        .btn {
+            width: 100%;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: var(--transition);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .btn:hover { 
+            background: var(--primary-dark); 
+        }
+        
+        .btn:disabled { 
+            background: var(--gray); 
+            cursor: not-allowed;
+        }
+        
+        .result {
+            margin-top: 12px;
+            padding: 10px;
+            background: var(--dark);
+            color: var(--light);
+            border-radius: var(--border-radius);
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            word-break: break-all;
+            max-height: 100px;
+            overflow-y: auto;
+            font-size: 11px;
+            display: none;
+        }
+        
+        .status {
+            padding: 8px;
+            border-radius: var(--border-radius);
+            margin: 10px 0;
+            font-size: 12px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+        
+        .status-success { 
+            background: #d4edda; 
+            color: #155724; 
+            border-left: 3px solid var(--success);
+        }
+        
+        .status-error { 
+            background: #f8d7da; 
+            color: #721c24; 
+            border-left: 3px solid var(--danger);
+        }
+        
+        .status-info { 
+            background: #d1ecf1; 
+            color: #0c5460; 
+            border-left: 3px solid var(--primary);
+        }
+        
+        .status-warning { 
+            background: #fff3cd; 
+            color: #856404; 
+            border-left: 3px solid var(--warning);
+        }
+        
+        .file-info {
+            margin: 10px 0;
+            padding: 8px;
+            background: var(--light);
+            border-radius: var(--border-radius);
+            font-size: 12px;
+            display: none;
+            border-left: 3px solid var(--primary);
+        }
+        
+        .loading {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .config-row {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .config-row .form-group {
+            flex: 1;
+            margin-bottom: 0;
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                max-width: 100%;
+            }
+            
+            .content {
+                padding: 15px;
+            }
+            
+            .config-row {
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-cloud-download-alt"></i> Karing 订阅处理器</h1>
+            <p class="subtitle">安全、便捷的订阅链接处理工具</p>
+        </header>
+        
+        <div class="content">
+            <div class="form-group">
+                <label class="form-label" for="githubToken"><i class="fas fa-key"></i> GitHub Token</label>
+                <input type="password" id="githubToken" class="config-input" placeholder="输入您的GitHub Token (必需)">
+            </div>
+            
+            <div class="config-row">
+                <div class="form-group">
+                    <label class="form-label" for="repoOwner"><i class="fas fa-user"></i> GitHub用户名</label>
+                    <input type="text" id="repoOwner" class="config-input" placeholder="输入GitHub用户名 (必需)">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="repoName"><i class="fas fa-database"></i> 仓库名</label>
+                    <input type="text" id="repoName" class="config-input" placeholder="输入仓库名" value="My-text">
+                </div>
+            </div>
+            
+            <div class="upload-area" id="uploadArea">
+                <input type="file" id="fileInput" accept=".txt" style="display: none;">
+                <div class="upload-icon">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                </div>
+                <h3>选择订阅文件</h3>
+                <p>点击或拖拽 .txt 文件到此处</p>
+            </div>
+            
+            <div class="file-info" id="fileInfo"></div>
+            
+            <div id="status"></div>
+            
+            <button class="btn" id="processBtn" onclick="processAndUpload()" disabled>
+                <i class="fas fa-cogs"></i> 处理并上传
+            </button>
+            
+            <div class="result" id="result"></div>
+        </div>
+    </div>
+
+    <script>
+        let fileContent = '', targetUrl = '', base64Content = '', githubConfig = {};
+
+        function init() {
+            loadGithubConfig();
+            setupEventListeners();
+        }
+
+        function setupEventListeners() {
+            document.getElementById('fileInput').addEventListener('change', function(e) {
+                if (e.target.files.length > 0) handleFileSelect(e.target.files[0]);
+            });
+
+            const uploadArea = document.getElementById('uploadArea');
+            uploadArea.addEventListener('click', () => document.getElementById('fileInput').click());
+            uploadArea.addEventListener('dragover', e => {
+                e.preventDefault();
+                uploadArea.classList.add('active');
+            });
+            uploadArea.addEventListener('dragleave', () => uploadArea.classList.remove('active'));
+            uploadArea.addEventListener('drop', e => {
+                e.preventDefault();
+                uploadArea.classList.remove('active');
+                if (e.dataTransfer.files.length > 0) handleFileSelect(e.dataTransfer.files[0]);
+            });
+            
+            document.getElementById('githubToken').addEventListener('input', checkReadyState);
+            document.getElementById('repoOwner').addEventListener('input', checkReadyState);
+            document.getElementById('repoName').addEventListener('input', checkReadyState);
+        }
+
+        function checkReadyState() {
+            const token = document.getElementById('githubToken').value.trim();
+            const owner = document.getElementById('repoOwner').value.trim();
+            const repo = document.getElementById('repoName').value.trim();
+            
+            if (token && owner && repo && fileContent) {
+                document.getElementById('processBtn').disabled = false;
+            } else {
+                document.getElementById('processBtn').disabled = true;
+            }
+        }
+
+        function loadGithubConfig() {
+            const saved = localStorage.getItem('githubConfig');
+            if (saved) {
+                try {
+                    githubConfig = JSON.parse(saved);
+                    document.getElementById('githubToken').value = githubConfig.token || '';
+                    document.getElementById('repoOwner').value = githubConfig.owner || '';
+                    document.getElementById('repoName').value = githubConfig.repo || 'Karing';
+                } catch (e) {
+                    console.error('加载配置失败:', e);
+                }
+            }
+        }
+
+        function handleFileSelect(file) {
+            if (!file.name.endsWith('.txt')) {
+                showStatus('请选择.txt文件', 'error');
+                return;
+            }
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                fileContent = e.target.result;
+                targetUrl = extractUrl(fileContent);
+                
+                if (targetUrl) {
+                    showFileInfo(`<i class="fas fa-file-alt"></i> 已选择文件: ${file.name}<br><i class="fas fa-link"></i> 找到链接: ${targetUrl}`);
+                    showStatus('文件已选择，可以处理', 'success');
+                    checkReadyState();
+                } else {
+                    showFileInfo(`<i class="fas fa-file-alt"></i> 已选择文件: ${file.name}`);
+                    showStatus('文件中未找到有效链接', 'warning');
+                }
+            };
+            reader.onerror = function() {
+                showStatus('文件读取失败', 'error');
+            };
+            reader.readAsText(file);
+        }
+
+        function showFileInfo(info) {
+            const fileInfoDiv = document.getElementById('fileInfo');
+            fileInfoDiv.innerHTML = info;
+            fileInfoDiv.style.display = 'block';
+        }
+
+        function extractUrl(content) {
+            const urlMatch = content.match(/https?:\/\/[^\s\r\n]+/);
+            return urlMatch ? urlMatch[0] : null;
+        }
+
+        async function processAndUpload() {
+            if (!targetUrl) {
+                showStatus('请先选择包含链接的文件', 'error');
+                return;
+            }
+            
+            const token = document.getElementById('githubToken').value.trim();
+            const owner = document.getElementById('repoOwner').value.trim();
+            const repo = document.getElementById('repoName').value.trim() || 'Karing';
+            
+            if (!token || !owner) {
+                showStatus('请填写GitHub配置', 'error');
+                return;
+            }
+            
+            githubConfig = { token, owner, repo };
+            try {
+                localStorage.setItem('githubConfig', JSON.stringify(githubConfig));
+            } catch (e) {
+                console.warn('无法保存配置到本地存储:', e);
+            }
+            
+            try {
+                showStatus('<div class="loading"></div> 正在处理文件...', 'info');
+                document.getElementById('processBtn').disabled = true;
+                document.getElementById('processBtn').innerHTML = '<div class="loading"></div> 处理中...';
+                
+                // 使用多个代理服务以提高成功率
+                const proxyUrls = [
+                    'https://api.allorigins.win/get?url=' + encodeURIComponent(targetUrl),
+                    'https://corsproxy.io/?' + encodeURIComponent(targetUrl),
+                    'https://cors-anywhere.herokuapp.com/' + targetUrl
+                ];
+                
+                let response = null;
+                let lastError = null;
+                
+                // 尝试多个代理
+                for (const proxyUrl of proxyUrls) {
+                    try {
+                        showStatus(`<div class="loading"></div> 尝试通过代理获取数据...`, 'info');
+                        response = await fetchWithTimeout(proxyUrl, { timeout: 10000 });
+                        
+                        if (response.ok) {
+                            break;
+                        }
+                    } catch (error) {
+                        lastError = error;
+                        console.warn(`代理 ${proxyUrl} 失败:`, error);
+                        continue;
+                    }
+                }
+                
+                if (!response || !response.ok) {
+                    throw new Error(lastError?.message || `无法获取目标URL内容 (HTTP ${response?.status})`);
+                }
+                
+                let data;
+                const responseText = await response.text();
+                
+                try {
+                    // 尝试解析为JSON（对于allorigins.win）
+                    data = JSON.parse(responseText);
+                    if (data.contents) {
+                        base64Content = cleanBase64Content(data.contents);
+                    } else {
+                        // 如果不是预期的JSON格式，直接使用响应文本
+                        base64Content = cleanBase64Content(responseText);
+                    }
+                } catch (e) {
+                    // 如果JSON解析失败，直接使用响应文本
+                    base64Content = cleanBase64Content(responseText);
+                }
+                
+                if (!base64Content) {
+                    throw new Error('未找到有效的Base64内容');
+                }
+                
+                showStatus('<div class="loading"></div> 正在上传到GitHub...', 'info');
+                
+                const result = await githubUploadFile('subscribe.txt', base64Content);
+                
+                showStatus('<i class="fas fa-check-circle"></i> 上传成功！', 'success');
+                showResult(`上传成功！\n文件: https://github.com/${githubConfig.owner}/${githubConfig.repo}/blob/main/subscribe.txt\n内容长度: ${base64Content.length} 字符\n提交SHA: ${result.commit.sha.substring(0, 8)}...`);
+                
+            } catch (error) {
+                console.error('处理失败:', error);
+                showStatus(`<i class="fas fa-exclamation-circle"></i> 处理失败: ${error.message}`, 'error');
+            } finally {
+                document.getElementById('processBtn').disabled = false;
+                document.getElementById('processBtn').innerHTML = '<i class="fas fa-cogs"></i> 处理并上传';
+            }
+        }
+
+        // 添加超时功能的fetch
+        function fetchWithTimeout(url, options = {}) {
+            const { timeout = 8000, ...fetchOptions } = options;
+            
+            return new Promise((resolve, reject) => {
+                const controller = new AbortController();
+                const signal = controller.signal;
+                
+                const timeoutId = setTimeout(() => {
+                    controller.abort();
+                    reject(new Error('请求超时'));
+                }, timeout);
+                
+                fetch(url, { ...fetchOptions, signal })
+                    .then(response => {
+                        clearTimeout(timeoutId);
+                        resolve(response);
+                    })
+                    .catch(error => {
+                        clearTimeout(timeoutId);
+                        reject(error);
+                    });
+            });
+        }
+
+        function cleanBase64Content(content) {
+            if (!content) return '';
+            
+            const lines = content.split('\n');
+            let cleanContent = '';
+            
+            for (let line of lines) {
+                const trimmedLine = line.trim();
+                if (trimmedLine === '' || trimmedLine.startsWith('#')) continue;
+                if (/^[A-Za-z0-9+/=]+$/.test(trimmedLine) && trimmedLine.length >= 10) {
+                    cleanContent += trimmedLine + '\n';
+                }
+            }
+            return cleanContent.trim();
+        }
+
+        async function githubUploadFile(filename, content) {
+            const url = `https://api.github.com/repos/${githubConfig.owner}/${githubConfig.repo}/contents/${filename}`;
+            
+            let sha = '';
+            try {
+                const existingResponse = await fetchWithTimeout(url, {
+                    headers: { 
+                        'Authorization': `Bearer ${githubConfig.token}`, 
+                        'Accept': 'application/vnd.github.v3+json',
+                        'User-Agent': 'Karing-Subscription-Processor'
+                    },
+                    timeout: 10000
+                });
+                
+                if (existingResponse.ok) {
+                    const existingData = await existingResponse.json();
+                    sha = existingData.sha;
+                } else if (existingResponse.status !== 404) {
+                    const errorText = await existingResponse.text();
+                    throw new Error(`检查文件失败: ${existingResponse.status} - ${errorText}`);
+                }
+            } catch (e) {
+                console.warn('检查现有文件失败:', e);
+            }
+            
+            // 确保内容编码正确
+            let encodedContent;
+            try {
+                encodedContent = btoa(unescape(encodeURIComponent(content)));
+            } catch (e) {
+                throw new Error('内容编码失败: ' + e.message);
+            }
+            
+            const response = await fetchWithTimeout(url, {
+                method: 'PUT',
+                headers: {
+                    'Authorization': `Bearer ${githubConfig.token}`,
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/vnd.github.v3+json',
+                    'User-Agent': 'Karing-Subscription-Processor'
+                },
+                body: JSON.stringify({
+                    message: `更新订阅文件: ${new Date().toLocaleString('zh-CN')}`,
+                    content: encodedContent,
+                    sha: sha || undefined
+                }),
+                timeout: 15000
+            });
+            
+            const responseText = await response.text();
+            
+            if (!response.ok) {
+                let errorMessage;
+                try {
+                    const errorData = JSON.parse(responseText);
+                    errorMessage = errorData.message || `上传失败: ${response.status}`;
+                } catch (e) {
+                    errorMessage = `上传失败: ${response.status} - ${responseText}`;
+                }
+                throw new Error(errorMessage);
+            }
+            
+            try {
+                return JSON.parse(responseText);
+            } catch (e) {
+                throw new Error('GitHub响应解析失败: ' + e.message);
+            }
+        }
+
+        function showResult(content) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.textContent = content;
+            resultDiv.style.display = 'block';
+        }
+
+        function showStatus(message, type) {
+            const statusDiv = document.getElementById('status');
+            statusDiv.innerHTML = `<div class="status status-${type}">${message}</div>`;
+            
+            // 5秒后自动清除成功和信息状态
+            if (type === 'success' || type === 'info') {
+                setTimeout(() => {
+                    if (statusDiv.innerHTML.includes(message)) {
+                        statusDiv.innerHTML = '';
+                    }
+                }, 5000);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
