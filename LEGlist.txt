@@ -1,3 +1,2 @@
-Mir|Legmir|Test|127.0.0.1|7000||password
 
-
+Legmir|Test|127.0.0.1|7000||password
