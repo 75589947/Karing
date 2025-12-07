@@ -1,0 +1,33 @@
+域名注册信息
+https://dash.domain.digitalplat.org/
+zsdadmin/Zsd830910
+Jack Z
+zsd76276560@gmail.com
++1-3176276560
+California,Calabasas,3838 Joy Lane
+
+https://my.dnshe.com
+76276560/789635
+
+https://www.netlib.re/
+zsdadmin/zsd830910789635
+
+域名
+76276560.dpdns.org
+DNS
+daisy.ns.cloudflare.com
+hal.ns.cloudflare.com
+
+75589947.dpdns.org
+DNS
+fred.ns.cloudflare.com
+magali.ns.cloudflare.com
+
+域名管理面板
+https://dash.domain.digitalplat.org/panel/manager/76276560.dpdns.org
+https://dash.domain.digitalplat.org/panel/manager/75589947.dpdns.org
+
+BPB面板
+Zsd12345
+
+nslookup -type=NS zsd10086.netlib.re
