@@ -39,7 +39,6 @@
 {"name":"万达💜线路","url":"https://www.macms.pro/box/3.json"},
 {"name":"南风💜线路","url":"https://github.moeyy.xyz/https://raw.githubusercontent.com/yoursmile66/TVBox/main/XC.json"},
 {"name":"X影💜线路","url":"https://gitlab.com/mfkdy/vip/-/raw/main/Lite.json"},
-{"name":"二小💜线路","url":"http://tvbox.王二小放牛娃.top"},
 {"name":"开心💜线路","url":"http://kxrj.site:55/天天开心"},
 {"name":"鱼儿💜线路","url":"http://我不是.摸鱼儿.com"},
 {"name":"东辰💜线路","url":"https://gitee.com/dongchenliu/liu/raw/master/yb.json"},
