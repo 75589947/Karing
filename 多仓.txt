@@ -1,0 +1,25 @@
+//以下内容为互联网收集，只为自用。//clan://localhost/Pictures/dm.txt
+{ "storeHouse": [ 
+    {
+      "sourceName": "🍈自用仓库",
+      "sourceUrl": "http://liucn.cc/box/dc.txt"
+    },
+    {
+      "sourceName": "🍉砂锅仓库",
+      "sourceUrl": "https://agit.ai/ddx/TVBox/raw/branch/master/d.json"
+    },
+    {
+      "sourceName": "🍐吾爱仓库",
+      "sourceUrl": "http://liucn.cc/box/d2.txt"
+    }, 
+   {
+      "sourceName": "🍑天微仓库",
+      "sourceUrl": "https://tvkj.top/DC.txt"
+    },
+   {
+      "sourceName": "🥝多多仓库",
+      "sourceUrl": "https://atomgit.com/iduo/Box/raw/master/duo.json"
+    }
+
+    ]
+}
