@@ -28,7 +28,7 @@
 {"name":"🐯猫技{跑马灯}","url":"https://agit.ai/ddx/TVBox/raw/branch/master/m.json"},
 {"name":"💧分享者{跑马灯}","url":"https://agit.ai/767820774/mao666/raw/branch/master/00/000.m3u8"},
 {"name":"🚚运输车{跑马灯}","url":"https://weixine.net/ysc.json"},
-{"name":"💦巧技","url":"http://cdn.qiaoji8.com/tvbox.json"}，
+{"name":"💦巧技","url":"http://cdn.qiaoji8.com/tvbox.json"},
 
 {"name": "饭太硬💜线路","url": "http://www.饭太硬.com/tv/"},
 {"name": "欧歌💜线路","url": "https://xn--9ff9-rp5imh.v.nxog.top/m/?ou=公众号欧歌app&mz=index&jar=index&b=9f欧歌f9"},
@@ -73,7 +73,7 @@
 {"name": "各种网盘💜线路","url": "https://gh.llkk.cc/https://raw.githubusercontent.com/PizazzGY/TVBox/main/api.json"},
 {"name": "PizazzGY💜线路","url": "https://github.moeyy.xyz/https://github.com/PizazzGY/TVBox/blob/main/api.json"},
 {"name": "PiGY备用💜线路","url": "https://github.ednovas.xyz/https://raw.githubusercontent.com/PizazzGY/TVBox/main/api.json"},
-{"name": "影视备用💜线路","url": "https://d.kstore.dev/download/6474/tvbox/api.json"}，
+{"name": "影视备用💜线路","url": "https://d.kstore.dev/download/6474/tvbox/api.json"},
 
 {"name":"巧技","url":"http://cdn.qiaoji8.com/tvbox.json"},
 {"name":"肥猫","url":"http://肥猫.com"},
