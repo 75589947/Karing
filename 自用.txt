@@ -13,17 +13,9 @@
 {"name":"💜Hell线路","url":"https://catbox.n13.club/jk/jsm.json"},
 {"name":"💜D佬大","url":"https://d.kstore.dev/download/2883/nzk/nzk0722.json"},
 {"name":"💜动漫城","url":"https://www.yingm.cc/dm/dm.json"},
-{"name":"💜喵影视","url":"http://meowtv.cn/tv"},
 {"name":"💜小脑斧","url":"https://d.kstore.dev/download/6492/xnf/xnf.json"},
-{"name":"💜YHY","url":"https://7336.kstore.space/tvbox/yhykeji.json"},
 {"name":"💜青龙","url":"https://gitee.com/yiwu369/6758/raw/master/1.json"},
-{"name":"💜小米","url":"http://www.mpanso.com/小米/DEMO.json"},
-{"name":"💜恒星","url":"http://yuhuavip1.top/育华学堂/斧头帮.php"},
 {"name":"💜OK","url":"http://ok321.top/ok"},
-{"name":"💜神仙","url":"http://pt.sxtv.top:66/sx.json"},
-{"name":"💜俊佬","url":"http://home.jundie.top:81/top98.json"},
-{"name":"💜短剧","url":"http://74.120.175.78/JK/XYQTVBox/dj.json"},
-{"name":"💜万达","url":"https://www.macms.pro/box/3.json"},
 {"name":"💜X影","url":"https://gitlab.com/mfkdy/vip/-/raw/main/Lite.json"},
 {"name":"💜开心","url":"http://kxrj.site:55/天天开心"},
 {"name":"💜鱼儿","url":"http://我不是.摸鱼儿.com"},
@@ -61,6 +53,7 @@
 {"name":"蜗牛","url":"https://tv.xn--11x555b.top/svip"}
 ]}
 
+//失效
 {"name":"🎬影探","url":"http://www.lyyytv.cn/yt/yt.json"},
 {"name":"🛡大卫","url":"https://xhdwc.tk/0"},
 {"name":"💮巴不巴拉","url":"https://bjson.cf/balabala"},
@@ -79,3 +72,4 @@
 {"name":"🐯猫技{跑马灯}","url":"https://agit.ai/ddx/TVBox/raw/branch/master/m.json"},
 {"name":"💧分享者{跑马灯}","url":"https://agit.ai/767820774/mao666/raw/branch/master/00/000.m3u8"},
 {"name":"🚚运输车{跑马灯}","url":"https://weixine.net/ysc.json"},
+{"name":"💜俊佬","url":"http://home.jundie.top:81/top98.json"},
