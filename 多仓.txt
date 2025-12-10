@@ -1,4 +1,4 @@
-//多仓
+//多仓🍎🥭🍊🍍🍈🍉🍐🍑🥝
 { "storeHouse": [
     {
       "sourceName": "🍈自用仓库",
@@ -7,6 +7,10 @@
     {
       "sourceName": "🍐吾爱仓库",
       "sourceUrl": "http://liucn.cc/box/d2.txt"
+    },
+    {
+      "sourceName": "🍍多线仓库",
+      "sourceUrl": "https://text.75589947.dpdns.org/多线路.txt"
     }
     ]
 }
