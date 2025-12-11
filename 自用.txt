@@ -1,7 +1,7 @@
 //自用仓库
 {"urls":[
 {"name":"💦巧技","url":"http://cdn.qiaoji8.com/tvbox.json"},
-{"name":"🎬影综","url":"https://9877.kstore.space/AnotherD/api.json"}
+{"name":"🎬影综","url":"https://9877.kstore.space/AnotherD/api.json"},
 {"name":"🍚饭太硬","url":"http://www.饭太硬.com/tv/"},
 {"name":"🐼肥猫","url":"http://肥猫.com"},
 {"name":"💠欧歌","url":"https://xn--tkh-mf3g9f.v.nxog.top/m/111.php?ou=公众号欧歌app&mz=index&jar=index&123&b=欧歌tkh"},
