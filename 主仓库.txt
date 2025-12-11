@@ -11,6 +11,6 @@
 {"name":"🌼香雅情","url":"https://gh-proxy.com/https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json"},
 {"name":"💞多多","url":"http://yydsys.top/duo"},
 {"name":"🌼菜妮丝","url":"https://tv.xn--yhqu5zs87a.top"},
-{"name":"🌙月光宝盒","url":"https://jihulab.com/bh666/YGBH/-/raw/main/box原.json?ref_type=heads"},
+{"name":"🌙月光宝盒","url":"https://gh-proxy.com/https://raw.githubusercontent.com/guot55/yg/refs/heads/main/pg/jsm2.json"},
 {"name":"✨星星","url":"https://gitee.com/myxkx/xxysck/raw/master/星星影视仓库内容.txt"}
 ]}
