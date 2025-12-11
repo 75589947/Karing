@@ -4,7 +4,6 @@
 {"name":"💜liucc","url":"http://liucn.cc/box/m.json"},
 {"name":"💜Hell线路","url":"https://catbox.n13.club/jk/jsm.json"},
 {"name":"💜D佬大","url":"https://d.kstore.dev/download/2883/nzk/nzk0722.json"},
-{"name":"💜心魔","url":"https://gh-proxy.com/https://raw.githubusercontent.com/yw88075/tvbox/main/yw.json"},
 {"name":"💜小脑斧","url":"https://d.kstore.dev/download/6492/xnf/xnf.json"},
 {"name":"💜青龙","url":"https://gitee.com/yiwu369/6758/raw/master/1.json"},
 {"name":"💜黄金","url":"https://gitlab.com/lzc1021lzc/hjfggzs.hjys/-/raw/main/hjys.free.json"},
