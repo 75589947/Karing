@@ -1,60 +1,16 @@
 //自用仓库
-{"urls":[
-{"name":"💦巧技","url":"http://cdn.qiaoji8.com/tvbox.json"},
-{"name":"🎬影综","url":"https://9877.kstore.space/AnotherD/api.json"},
-{"name":"🍚饭太硬","url":"http://www.饭太硬.com/tv/"},
-{"name":"🐼肥猫","url":"http://肥猫.com"},
-{"name":"💠欧歌","url":"https://xn--tkh-mf3g9f.v.nxog.top/m/111.php?ou=公众号欧歌app&mz=index&jar=index&123&b=欧歌tkh"},
-{"name":"💞多多","url":"http://yydsys.top/duo"},
-{"name":"🌼菜妮丝","url":"https://tv.xn--yhqu5zs87a.top"},
-{"name":"🌙月光宝盒","url":"https://jihulab.com/bh666/YGBH/-/raw/main/box原.json?ref_type=heads"},
-{"name":"✨星星","url":"https://gitee.com/myxkx/xxysck/raw/master/星星影视仓库内容.txt"},
-{"name":"🌪南风","url":"https://ghfast.top/https://raw.githubusercontent.com/yoursmile66/TVBox/main/XC.json"},
-{"name":"💜道长","url":"https://gitlab.com/duomv/dzhipy/-/raw/main/index.json"},
-{"name":"💜liucc","url":"http://liucn.cc/box/m.json"},
-{"name":"💜Hell线路","url":"https://catbox.n13.club/jk/jsm.json"},
-{"name":"💜D佬大","url":"https://d.kstore.dev/download/2883/nzk/nzk0722.json"},
-{"name":"💜小脑斧","url":"https://d.kstore.dev/download/6492/xnf/xnf.json"},
-{"name":"💜青龙","url":"https://gitee.com/yiwu369/6758/raw/master/1.json"},
-{"name":"💜OK","url":"http://ok321.top/ok"},
-{"name":"💜鱼儿","url":"http://我不是.摸鱼儿.com"},
-{"name":"💜黄金","url":"https://gitlab.com/lzc1021lzc/hjfggzs.hjys/-/raw/main/hjys.free.json"},
-{"name":"💜各种网盘","url":"https://gh.llkk.cc/https://raw.githubusercontent.com/PizazzGY/TVBox/main/api.json"},
-{"name":"💜传说","url":"https://chuanshuo.77blog.cn/tv.json"},
-{"name":"💜动漫城","url":"https://www.yingm.cc/dm/dm.json"},
-{"name":"💜心魔{VPN}","url":"https://raw.githubusercontent.com/yw88075/tvbox/main/yw.json"},
-{"name":"💜木鱼线路{验证码}","url":"https://d.kstore.dev/download/12020/t4.json"},
-{"name":"天微","url":"https://7337.kstore.vip/tw.json"},
-{"name":"蓝天","url":"https://gitee.com/lukei7/lib/raw/Luck/%E8%87%AA%E5%BB%BA.json"},
-{"name":"青檬","url":"https://11293.kstore.space/%E8%A5%BF%E6%9F%9Ays.json"},
-{"name":"真心","url":"https://cnb.cool/fish2018/zx/-/git/raw/master/FongMi.json"},
-{"name":"二小","url":"http://tvbox.王二小放牛娃.top"},
-{"name":"七星","url":"https://7337.kstore.space/qxys/%E7%A6%81%E6%AD%A2%E4%BC%A0%E6%92%AD.json"},
-{"name":"高天","url":"https://ghfast.top/https://raw.githubusercontent.com/debaters6/XYQ/master/0821.json"},
-{"name":"朱雀","url":"https://gitee.com/yiwu369/6758/raw/master/朱雀/api.json"},
-{"name":"茄子","url":"https://700sjro44343.vicp.fun/eggp/qzku/tv.json"},
-{"name":"驸马","url":"http://fmys.top/fmys.json"},
-{"name":"蜗牛{跑马灯}","url":"https://tv.xn--11x555b.top/svip"}
-]}
-
-//失效
-{"name":"🛡大卫","url":"https://xhdwc.tk/0"},
-{"name":"💮巴不巴拉","url":"https://bjson.cf/balabala"},
-{"name":"🍨刺桐","url":"http://tv.cttv.vip/uploads/itvbox/vip.json"},
-{"name":"💝爱TV吧","url":"http://tt.58cxz.com/001.json"},
-{"name":"🍃吾爱","url":"http://52bsj.vip:98/wuai"},
-{"name":"🌷荷城茶秀","url":"http://rihou.cc:88/荷城茶秀"},
-{"name":"🍀俊宇","url":"http://home.jundie.top:81/top98.json"},
-{"name":"📿神器","url":"https://神器每日推送.tk/pz.json"},
-{"name":"☁云观","url":"http://52bsj.vip:81/api/v3/file/get/161268/52.txt?sign=oYVF6yRp1d_2lBrCMXoWPoRRDmkh-YEWlo1qpKxJG8Q%3D%3A0"},
-{"name":"🐥胖鸭","url":"https://agit.ai/cyl518/yl/raw/branch/master/pytv.json"},
-{"name":"💝于氏","url":"https://agit.ai/sejinan/app/raw/branch/box/yu"},
-{"name":"☁云星","url":"http://itvbox.cc/tvbox/云星日记/1.m3u8"},
-{"name":"🐯catbox","url":"https://agit.ai/ddx/TVBox/raw/branch/master/catbox.json"},
-{"name":"🐯catboxT4","url":"https://agit.ai/ddx/TVBox/raw/branch/master/t4.json"},
-{"name":"🐯猫技{跑马灯}","url":"https://agit.ai/ddx/TVBox/raw/branch/master/m.json"},
-{"name":"💧分享者{跑马灯}","url":"https://agit.ai/767820774/mao666/raw/branch/master/00/000.m3u8"},
-{"name":"🚚运输车{跑马灯}","url":"https://weixine.net/ysc.json"},
-{"name":"💜俊佬","url":"http://home.jundie.top:81/top98.json"},
-{"name":"💜春莹","url":"https://gitlink.org.cn/api/hailin/aishangtv5/raw/tvbox/aishang.json?ref=master"},
-{"name":"香雅","url":"https://raw.kkgithub.com/xyq254245/xyqonlinerule/main/XYQTVBox.json"},
+{ "storeHouse": [
+    {
+      "sourceName": "主仓库",
+      "sourceUrl": "https://text.75589947.dpdns.org/主仓库.txt"
+    },
+    {
+      "sourceName": "备用仓",
+      "sourceUrl": "https://text.75589947.dpdns.org/备用仓.txt"
+    },
+    {
+      "sourceName": "测试仓",
+      "sourceUrl": "https://text.75589947.dpdns.org/测试仓.txt"
+    }
+    ]
+}
