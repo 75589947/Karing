@@ -1,5 +1,8 @@
 //测试仓
 {"urls":[
+{"name":"青檬","url":"https://11293.kstore.space/%E8%A5%BF%E6%9F%9Ays.json"},
+{"name":"真心","url":"https://cnb.cool/fish2018/zx/-/git/raw/master/FongMi.json"},
+{"name":"高天","url":"https://gh-proxy.com/https://raw.githubusercontent.com/debaters6/XYQ/master/0821.json"},
 {"name":"朱雀","url":"https://gitee.com/yiwu369/6758/raw/master/朱雀/api.json"},
 {"name":"短剧","url":"http://box.ufuzi.com/tv/qq/短剧频道/api.json"},
 {"name":"少儿","url":"https://jihulab.com/ymz1231/xymz/-/raw/main/ymshaoer"},
