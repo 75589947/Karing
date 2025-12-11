@@ -1,14 +1,20 @@
 //备用仓
 {"urls":[
-{"name":"💜道长","url":"https://gitlab.com/duomv/dzhipy/-/raw/main/index.json"},
-{"name":"💜liucc","url":"http://liucn.cc/box/m.json"},
-{"name":"💜Hell线路","url":"https://catbox.n13.club/jk/jsm.json"},
-{"name":"💜D佬大","url":"https://d.kstore.dev/download/2883/nzk/nzk0722.json"},
-{"name":"💜小脑斧","url":"https://d.kstore.dev/download/6492/xnf/xnf.json"},
-{"name":"💜青龙","url":"https://gitee.com/yiwu369/6758/raw/master/1.json"},
-{"name":"💜黄金","url":"https://gitlab.com/lzc1021lzc/hjfggzs.hjys/-/raw/main/hjys.free.json"},
-{"name":"💜各种网盘","url":"https://gh.llkk.cc/https://raw.githubusercontent.com/PizazzGY/TVBox/main/api.json"},
-{"name":"💜传说","url":"https://chuanshuo.77blog.cn/tv.json"},
-{"name":"💜动漫城","url":"https://www.yingm.cc/dm/dm.json"},
-{"name":"💜木鱼线路{验证码}","url":"https://d.kstore.dev/download/12020/t4.json"}
+{"name":"道长","url":"https://gitlab.com/duomv/dzhipy/-/raw/main/index.json"},
+{"name":"liucc","url":"http://liucn.cc/box/m.json"},
+{"name":"Hell线路","url":"https://catbox.n13.club/jk/jsm.json"},
+{"name":"D佬大","url":"https://d.kstore.dev/download/2883/nzk/nzk0722.json"},
+{"name":"小脑斧","url":"https://d.kstore.dev/download/6492/xnf/xnf.json"},
+{"name":"青龙","url":"https://gitee.com/yiwu369/6758/raw/master/1.json"},
+{"name":"黄金","url":"https://gitlab.com/lzc1021lzc/hjfggzs.hjys/-/raw/main/hjys.free.json"},
+{"name":"各种网盘","url":"https://gh.llkk.cc/https://raw.githubusercontent.com/PizazzGY/TVBox/main/api.json"},
+{"name":"传说","url":"https://chuanshuo.77blog.cn/tv.json"},
+{"name":"动漫城","url":"https://www.yingm.cc/dm/dm.json"},
+{"name":"天微","url":"https://7337.kstore.vip/tw.json"},
+{"name":"蓝天","url":"https://gitee.com/lukei7/lib/raw/Luck/%E8%87%AA%E5%BB%BA.json"},
+{"name":"青檬","url":"https://11293.kstore.space/%E8%A5%BF%E6%9F%9Ays.json"},
+{"name":"真心","url":"https://cnb.cool/fish2018/zx/-/git/raw/master/FongMi.json"},
+{"name":"七星","url":"https://7337.kstore.space/qxys/%E7%A6%81%E6%AD%A2%E4%BC%A0%E6%92%AD.json"},
+{"name":"高天","url":"https://gh-proxy.com/https://raw.githubusercontent.com/debaters6/XYQ/master/0821.json"},
+{"name":"木鱼线路{验证码}","url":"https://d.kstore.dev/download/12020/t4.json"}
 ]}
