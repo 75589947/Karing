@@ -31,7 +31,7 @@
 {"name":"二小备用","url":"http://xhztv.top/xhz"},
 {"name":"月光宝盒","url":"http://xhztv.top/4k.json"},
 {"name":"月光宝盒备用","url":"http://64.112.42.49:6688/https://raw.githubusercontent.com/guot55/yg/refs/heads/main/pg/jsm2.json"},
-{"name":"牛二线路","url":"https://9280.kstore.space/wex.json"},
+{"name":"牛二线路","url":"https://9280.kstore.space/wex.json"}
 ]}
 
 //失效
