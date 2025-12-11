@@ -1,0 +1,14 @@
+//通用仓库
+{
+	"urls": [
+	{
+		"url": "https://text.75589947.dpdns.org/主仓库.txt",
+		"name": "主仓库"
+	}, {
+		"url": "https://text.75589947.dpdns.org/备用仓.txt",
+		"name": "备用仓"
+	}, {
+		"url": "https://text.75589947.dpdns.org/测试仓.txt",
+		"name": "测试仓"
+	}]
+}
