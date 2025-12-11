@@ -4,10 +4,13 @@
 {"name":"🎬影综","url":"https://9877.kstore.space/AnotherD/api.json"},
 {"name":"🍚饭太硬","url":"http://www.饭太硬.com/tv/"},
 {"name":"🐼肥猫","url":"http://肥猫.com"},
-{"name":"💠欧歌","url":"https://xn--tkh-mf3g9f.v.nxog.top/m/111.php?ou=公众号欧歌app&mz=index&jar=index&123&b=欧歌tkh"},
+{"name":"🐠摸鱼","url":"http://我不是.摸鱼儿.com"},
+{"name":"👌OK","url":"http://ok321.top/ok"},
+{"name":"💠欧歌","url":"http://tv.nxog.top/m"},
+{"name":"🌪南风","url":"https://gh-proxy.com/https://raw.githubusercontent.com/yoursmile66/TVBox/main/XC.json"},
+{"name":"🌼香雅情","url":"https://gh-proxy.com/https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json"},
 {"name":"💞多多","url":"http://yydsys.top/duo"},
 {"name":"🌼菜妮丝","url":"https://tv.xn--yhqu5zs87a.top"},
 {"name":"🌙月光宝盒","url":"https://jihulab.com/bh666/YGBH/-/raw/main/box原.json?ref_type=heads"},
-{"name":"✨星星","url":"https://gitee.com/myxkx/xxysck/raw/master/星星影视仓库内容.txt"},
-{"name":"🌪南风","url":"https://ghfast.top/https://raw.githubusercontent.com/yoursmile66/TVBox/main/XC.json"}
+{"name":"✨星星","url":"https://gitee.com/myxkx/xxysck/raw/master/星星影视仓库内容.txt"}
 ]}
