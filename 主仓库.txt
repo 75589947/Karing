@@ -14,5 +14,7 @@
 {"name":"🌙月光宝盒","url":"https://gh-proxy.com/https://raw.githubusercontent.com/guot55/yg/refs/heads/main/pg/jsm2.json"},
 {"name":"💞多多","url":"http://yydsys.top/duo"},
 {"name":"🌼菜妮丝","url":"https://tv.xn--yhqu5zs87a.top"},
+{"name":"🍆茄子","url":"https://700sjro44343.vicp.fun/eggp/qzku/tv.json"},
+{"name":"🐴驸马","url":"http://fmys.top/fmys.json"},
 {"name":"✨星星","url":"https://gitee.com/myxkx/xxysck/raw/master/星星影视仓库内容.txt"}
 ]}
