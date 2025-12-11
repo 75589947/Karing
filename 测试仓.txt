@@ -3,8 +3,7 @@
 {"name":"朱雀","url":"https://gitee.com/yiwu369/6758/raw/master/朱雀/api.json"},
 {"name":"短剧","url":"http://box.ufuzi.com/tv/qq/短剧频道/api.json"},
 {"name":"少儿","url":"https://jihulab.com/ymz1231/xymz/-/raw/main/ymshaoer"},
-{"name":"蜗牛{跑马灯}","url":"https://tv.xn--11x555b.top/svip"},
-{"name":"木鱼线路{验证码}","url":"https://d.kstore.dev/download/12020/t4.json"}
+{"name":"蜗牛{跑马灯}","url":"https://tv.xn--11x555b.top/svip"}
 ]}
 
 //失效
