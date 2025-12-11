@@ -1,0 +1,17 @@
+//备用仓
+{"urls":[
+{"name":"💜道长","url":"https://gitlab.com/duomv/dzhipy/-/raw/main/index.json"},
+{"name":"💜liucc","url":"http://liucn.cc/box/m.json"},
+{"name":"💜Hell线路","url":"https://catbox.n13.club/jk/jsm.json"},
+{"name":"💜D佬大","url":"https://d.kstore.dev/download/2883/nzk/nzk0722.json"},
+{"name":"💜小脑斧","url":"https://d.kstore.dev/download/6492/xnf/xnf.json"},
+{"name":"💜青龙","url":"https://gitee.com/yiwu369/6758/raw/master/1.json"},
+{"name":"💜OK","url":"http://ok321.top/ok"},
+{"name":"💜鱼儿","url":"http://我不是.摸鱼儿.com"},
+{"name":"💜黄金","url":"https://gitlab.com/lzc1021lzc/hjfggzs.hjys/-/raw/main/hjys.free.json"},
+{"name":"💜各种网盘","url":"https://gh.llkk.cc/https://raw.githubusercontent.com/PizazzGY/TVBox/main/api.json"},
+{"name":"💜传说","url":"https://chuanshuo.77blog.cn/tv.json"},
+{"name":"💜动漫城","url":"https://www.yingm.cc/dm/dm.json"},
+{"name":"💜心魔{VPN}","url":"https://raw.githubusercontent.com/yw88075/tvbox/main/yw.json"},
+{"name":"💜木鱼线路{验证码}","url":"https://d.kstore.dev/download/12020/t4.json"}
+]}
